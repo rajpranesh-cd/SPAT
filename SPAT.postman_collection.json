@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "1d1b5844-d930-448b-9ef7-881d37d57707",
+		"name": "SPAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://login.microsoftonline.com/85722e96-8e10-4794-9933-f05d211175ef/oauth2/token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "7a04faac-afcc-429c-9d0b-344a50acab00",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "QIP8Q~4KnU-liIYGMmpG4VtLhzFAXPcktUgb1a-G",
+							"type": "text"
+						},
+						{
+							"key": "resource",
+							"value": "https://osispatsecv1fhir.azurehealthcareapis.com",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.microsoftonline.com/a1e0d321-9bb6-4795-8734-51559f5b3eb3/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"microsoftonline",
+						"com"
+					],
+					"path": [
+						"a1e0d321-9bb6-4795-8734-51559f5b3eb3",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetResourceCall",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL29zaXNwYXRzZWN2MWZoaXIuYXp1cmVoZWFsdGhjYXJlYXBpcy5jb20iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9hMWUwZDMyMS05YmI2LTQ3OTUtODczNC01MTU1OWY1YjNlYjMvIiwiaWF0IjoxNjc3NzUxODM4LCJuYmYiOjE2Nzc3NTE4MzgsImV4cCI6MTY3Nzc1NTczOCwiYWlvIjoiRTJaZ1lGRHZGMHd1Vm5qNzYvbTBFRVllMCtCN0FBPT0iLCJhcHBpZCI6IjdhMDRmYWFjLWFmY2MtNDI5Yy05ZDBiLTM0NGE1MGFjYWIwMCIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2ExZTBkMzIxLTliYjYtNDc5NS04NzM0LTUxNTU5ZjViM2ViMy8iLCJvaWQiOiIzZWUwNWExYS1jZGM2LTQwYTktOGM2Zi0zOWVjYTQxNmNlZjkiLCJyaCI6IjAuQVhZQUlkUGdvYmFibFVlSE5GRlZuMXMtczloNFowX3ZXdHhEb2Ytd2MzSkxsSlYyQUFBLiIsInN1YiI6IjNlZTA1YTFhLWNkYzYtNDBhOS04YzZmLTM5ZWNhNDE2Y2VmOSIsInRpZCI6ImExZTBkMzIxLTliYjYtNDc5NS04NzM0LTUxNTU5ZjViM2ViMyIsInV0aSI6IjVyajlURnVSZ1VDMEJUR2NvdjhSQUEiLCJ2ZXIiOiIxLjAifQ.TUXNGt3UY1GD8TonG9fr8GB1gUCAFq-N8l7IkUcdvWWXj7rzwqrSpWJ5oTNxhP4i0_biziZQEUAISM4ghgBd81o-Qn3Wg-l3KcIHRrKep-LBuPOnuMWnc0RIYQhLRPE9MRyZB0LPzyOZJ2T2oOAAN7QgRoyUCgxrGztlt1MO8k-ZUXERP-THEQp-9payNm4OU9cKc0aluwiw6QjOxK2rWJfCx7YqP-1_NYOGfnj8xEOXrlRuGVTOXrqxaW7sm2P5-vqI7SliNZQW1bjtlSNjHJ_onxhtZv7bax0plvPorQUiybcBxJqz5Of0TlkUw2moBqDLPVldnma1qLHddvn4iw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://osispatsecv1fhir.azurehealthcareapis.com/Patient?_lastUpdated=ge2021-09-13",
+					"protocol": "https",
+					"host": [
+						"osispatsecv1fhir",
+						"azurehealthcareapis",
+						"com"
+					],
+					"path": [
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "_lastUpdated",
+							"value": "ge2021-09-13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cca-uscore",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "eUD8Q~M9IuSUHdMRWHR_~Pt93CPP.oRumjwSPcYV",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "8a28d64e-58de-4b0f-8604-41dcb75a4434",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api-spat-sec.safhir.io/v1/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api-spat-sec.safhir.io/v1/authorize?aud=https://api-spat-sec.safhir.io",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "launch/patient openid fhirUser offline_access user/AllergyIntolerance.read user/CarePlan.read user/CareTeam.read user/Condition.read user/Device.read user/DiagnosticReport.read user/DocumentReference.read user/Encounter.read user/Goal.read user/Immunization.read user/Location.read user/Medication.read user/MedicationRequest.read user/Observation.read user/Organization.read user/Patient.read user/Practitioner.read user/PractitionerRole.read user/Procedure.read user/Provenance.read patient/AllergyIntolerance.read patient/CarePlan.read patient/CareTeam.read patient/Condition.read patient/Device.read patient/DiagnosticReport.read patient/DocumentReference.read patient/Encounter.read patient/Goal.read patient/Immunization.read patient/Location.read patient/Medication.read patient/MedicationRequest.read patient/Observation.read patient/Organization.read patient/Patient.read patient/Practitioner.read patient/PractitionerRole.read patient/Procedure.read patient/Provenance.read",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:5555/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-spat-sec.safhir.io/v1/api/uscore/AllergyIntolerance",
+					"protocol": "https",
+					"host": [
+						"api-spat-sec",
+						"safhir",
+						"io"
+					],
+					"path": [
+						"v1",
+						"api",
+						"uscore",
+						"AllergyIntolerance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cca-claims",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "launch/patient openid fhirUser offline_access patient/Coverage.read patient/ExplanationOfBenefit.read patient/Organization.read patient/Patient.read patient/Practitioner.read",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "eUD8Q~M9IuSUHdMRWHR_~Pt93CPP.oRumjwSPcYV",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "8a28d64e-58de-4b0f-8604-41dcb75a4434",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api-spat-sec.safhir.io/v1/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://api-spat-sec.safhir.io/v1/authorize?aud=https://api-spat-sec.safhir.io",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:5555/callback",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-spat-sec.safhir.io/v1/api/carin-bb/Coverage",
+					"protocol": "https",
+					"host": [
+						"api-spat-sec",
+						"safhir",
+						"io"
+					],
+					"path": [
+						"v1",
+						"api",
+						"carin-bb",
+						"Coverage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
